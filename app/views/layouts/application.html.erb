@@ -8,8 +8,19 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+　
+  <header>
+    <ul>
+      <li class="right"><a href="#">ログイン</a></li>
+      <li class="right"><a href="#">サインアップ</a></li>
+    </ul>
+  </header>
 
   <body>
     <%= yield %>
   </body>
+
+  <footer class="footer">
+    <p>© 9999 TwitterClone Corp.</p>
+  </footer>
 </html>
