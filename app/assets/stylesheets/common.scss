@@ -1,14 +1,16 @@
 html {
   position: relative;
   min-height: 100%;
+  background-color: #141F29;
 }
 
 
 header {
-  background-color: #172a3d;
+  background-color: #141F29;
   font-size: 0.8rem;
   height: 50px;
   margin-top: -1.5rem;
+  border-bottom: 1px solid #26323C;
 }
 
 header ul {
@@ -45,6 +47,7 @@ header li a:hover {
 
 body {
   text-align: center;
+  background-color: #141F29;
 }
 
 .footer {
@@ -52,7 +55,7 @@ body {
   height: 80px;
   position: absolute;
   bottom: 0;
-  background-color: #172a3d;
+  background-color: #141F29;
   display: table;
 }
 
@@ -63,4 +66,5 @@ body {
   padding-top: 1rem;
   text-align: center;
   vertical-align: middle;
+  border-top: 1px solid #26323C;
 }
