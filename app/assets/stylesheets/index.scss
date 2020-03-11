@@ -1,0 +1,54 @@
+.wrapper {
+  background-color: #141F29;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+.side_menu {
+  border-right: 1px solid #26323C;
+  float: left;
+  height: 50em;
+}
+
+.side_menu li {
+  height: 6rem;
+  margin-bottom: 10px;
+}
+
+.side_menu li:hover {
+  filter: invert(17%) sepia(91%) saturate(7085%) hue-rotate(128deg) brightness(100%) contrast(106%);
+  opacity: 0.6;
+}
+
+
+.side_menu li a {
+  text-decoration: none;
+  display: block;
+  margin-top: -2rem;
+  padding: 1.5rem;
+
+}
+
+.side_menu li a img {
+  height: 40px;
+}
+
+.side_menu .point a img{
+  filter: invert(17%) sepia(91%) saturate(7085%) hue-rotate(128deg) brightness(100%) contrast(106%);
+}
+
+.home{
+  margin-top: 20px;
+  margin-left: 20px;
+  float: left;
+  color: #fff;
+}
+
+.home a{
+  margin-top: 10px;
+}
