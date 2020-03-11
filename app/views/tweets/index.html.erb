@@ -1,4 +1,11 @@
 <body>
+<div class="container">
+  <% if flash.notice.present? %>
+    <div class="alert alert-success">
+      <%=  flash[:notice]%>
+    </div>
+  <% end %>
+</div>
 <section>
   <h3>ホーム</h3>
   <div class="createbtn">

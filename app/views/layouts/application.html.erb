@@ -11,20 +11,14 @@
 　
   <header>
     <ul>
+      <li class="left"><a>TweetClone</a></li>
       <li class="right"><a href="#">ログイン</a></li>
       <li class="right"><a href="#">サインアップ</a></li>
     </ul>
   </header>
 
   <body>
-  <div class="container">
-    <% if flash.notice.present? %>
-    <div class="alert alert-success">
-      <%=  flash[:notice]%>
-    </div>
-    <% end %>
     <%= yield %>
-  </div>
   </body>
 
   <footer class="footer">

@@ -40,6 +40,16 @@ header li a:hover {
   text-decoration: underline;
 }
 
+.left{
+  color: #c75454;
+  float: left;
+  font-size: 0.87rem;
+  font-style: italic;
+  background: -webkit-linear-gradient(0deg, #c5acac, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .right {
   float: right;
 }
