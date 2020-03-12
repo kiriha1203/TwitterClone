@@ -73,8 +73,14 @@ body {
   color: #fff;
   display: table-cell;
   font-size: 0.8rem;
-  padding-top: 1rem;
   text-align: center;
   vertical-align: middle;
   border-top: 1px solid #26323C;
+}
+
+.create_edit_tweet {
+  margin-top: 20px;
+  margin-left: 20px;
+  float: left;
+  color: #fff;
 }

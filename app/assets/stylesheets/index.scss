@@ -1,4 +1,5 @@
 .wrapper {
+  min-height: 100%;
   background-color: #141F29;
 }
 
@@ -12,7 +13,7 @@
 .side_menu {
   border-right: 1px solid #26323C;
   float: left;
-  height: 50em;
+  height: 100%;
 }
 
 .side_menu li {
@@ -51,4 +52,30 @@
 
 .home a{
   margin-top: 10px;
+}
+
+.tubuyaki{
+  border-bottom: 1px solid #26323C;
+  border-left: 1px solid #26323C;
+  border-collapse: separate;
+  color: #fff;
+  margin-top: 160px;
+  float: left;
+  width: 90%;
+}
+
+.t_content{
+  border-top: 1px solid #26323C;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.t_create_at{
+  text-align: left;
+  padding-left: 20px;
+}
+
+.t_edit{
+  text-align: right;
+  padding-right: 20px;
 }

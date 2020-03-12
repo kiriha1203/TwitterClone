@@ -15,12 +15,27 @@
     <li><%= link_to image_tag('side_notice.png'), "#" %></li>
     <li><%= link_to image_tag('side_dm.png'), "#" %></li>
   </aside>
-  <article class="home">
-      <h3>ホーム</h3>
-      <div class="createbtn">
-        <%= link_to 'つぶやく', new_tweet_path, class: 'btn btn-primary' %>
-      </div>
+
+  <article class="home clearfix">
+    <h3>ホーム</h3>
+    <div class="createbtn">
+      <%= link_to 'つぶやく', new_tweet_path, class: 'btn btn-primary' %>
+    </div>
   </article>
+
+  <table class="tubuyaki">
+    <% @tweets.each do |tweet| %>
+      <tr class="topborder">
+        <td colspan="2" class="t_content"><%= tweet.content %></td>
+      </tr>
+      <tr>
+        <td class="t_create_at"><%= tweet.created_at %></td> <%# updated_at使用するかも　%>
+        <td class="t_edit"><%= link_to '編集', edit_tweet_path(tweet), class: 'btn btn-primary'%></td>
+        　<%# 編集、リツイート　いいね　%>
+      </tr>
+    <% end %>
+  </table>
+
 </div>
 
 </body>
