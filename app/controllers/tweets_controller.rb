@@ -4,13 +4,16 @@ class TweetsController < ApplicationController
   end
 
   def new
-    @tweet =Tweet.new
+    @tweet = Tweet.new
   end
 
   def create
-    tweet = Tweet.new(tweet_params)
-    tweet.save
-    redirect_to tweets_url, notice: "「#{tweet.content}をツイートしました。」"
+    @tweet = Tweet.new(tweet_params)
+    if @tweet.save
+      redirect_to tweets_url, notice: "「#{tweet.content}をツイートしました。」"
+    else
+      render :new
+    end
   end
 
   def edit
@@ -18,9 +21,12 @@ class TweetsController < ApplicationController
   end
 
   def update
-    tweet = Tweet.find(params[:id])
-    tweet.update!(tweet_params)
-    redirect_to tweets_url, notice: "「#{tweet.created_at}のツイートを更新しました。」"
+    @tweet = Tweet.find(params[:id])
+    if @tweet.update(tweet_params)
+      redirect_to tweets_url, notice: "「#{tweet.created_at}のツイートを更新しました。」"
+    else
+      render :edit
+    end
   end
 
   def destroy
