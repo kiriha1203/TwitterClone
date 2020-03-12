@@ -1,11 +1,4 @@
 <body>
-<div class="container">
-  <% if flash.notice.present? %>
-    <div class="alert alert-success">
-      <%= flash[:notice] %>
-    </div>
-  <% end %>
-</div>
 
 <div class="wrapper clearfix">
   <aside class="side_menu">
@@ -17,6 +10,11 @@
   </aside>
 
   <article class="home clearfix">
+
+    <div class="infomation">
+      <%= flash[:notice] %>
+    </div>
+
     <h3>ホーム</h3>
     <div class="createbtn">
       <%= link_to 'つぶやく', new_tweet_path, class: 'btn btn-primary' %>
@@ -30,8 +28,13 @@
       </tr>
       <tr>
         <td class="t_create_at"><%= tweet.created_at %></td> <%# updated_at使用するかも　%>
-        <td class="t_edit"><%= link_to '編集', edit_tweet_path(tweet), class: 'btn btn-primary'%></td>
-        　<%# 編集、リツイート　いいね　%>
+        <td class="t_edit">
+          <%= link_to '編集', edit_tweet_path(tweet), class: 'btn btn-primary'%>
+          <%= link_to '削除', tweet, method: :delete,
+                      data: { confirm: "本当に削除していいですか？" },
+                      class: 'btn btn-danger'%>
+        </td>
+        　<%# 編集、削除、リツイート　いいね　%>
       </tr>
     <% end %>
   </table>

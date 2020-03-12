@@ -24,6 +24,9 @@ class TweetsController < ApplicationController
   end
 
   def destroy
+    tweet = Tweet.find(params[:id])
+    tweet.destroy
+    redirect_to tweets_url, notice: "「#{tweet.created_at}のツイートを削除しました。」"
   end
 
   private
