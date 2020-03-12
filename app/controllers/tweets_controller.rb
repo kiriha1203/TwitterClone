@@ -1,4 +1,6 @@
 class TweetsController < ApplicationController
+  before_action :set_tweet, only: [:edit, :update]
+
   def index
     @tweets = Tweet.all.order(updated_at: "DESC")
   end
@@ -10,7 +12,7 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(tweet_params)
     if @tweet.save
-      redirect_to tweets_url, notice: "「#{tweet.content}をツイートしました。」"
+      redirect_to tweets_url, notice: "「#{@tweet.content}をツイートしました。」"
     else
       render :new
     end
@@ -23,7 +25,7 @@ class TweetsController < ApplicationController
   def update
     @tweet = Tweet.find(params[:id])
     if @tweet.update(tweet_params)
-      redirect_to tweets_url, notice: "「#{tweet.created_at}のツイートを更新しました。」"
+      redirect_to tweets_url, notice: "「#{@tweet.created_at}のツイートを更新しました。」"
     else
       render :edit
     end
@@ -39,5 +41,9 @@ class TweetsController < ApplicationController
 
   def tweet_params
     params.require(:tweet).permit(:content)
+  end
+
+  def set_tweet
+    @tweet = Tweet.find(params[:id])
   end
 end
