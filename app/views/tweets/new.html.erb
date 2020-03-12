@@ -1,11 +1,11 @@
 <body>
-<div class="create_edit_tweet">
+<div class="create_edit_confirm_tweet">
   <h3>今何してる？</h3>
   <div class= "nav justify-content-end" >
     <%= link_to '一覧に戻る', tweets_path, class: 'nav-link' %>
   </div>
 
-  <%= render partial: 'form', locals: { tweet: @tweet} %>
+  <%= render 'form' %>
 
 </div>
 </body>

@@ -11,19 +11,26 @@ class TweetsController < ApplicationController
 
   def create
     @tweet = Tweet.new(tweet_params)
-    if @tweet.save
-      redirect_to tweets_url, notice: "「#{@tweet.content}をツイートしました。」"
-    else
+    if params[:back]
       render :new
+    else
+      if @tweet.save
+        redirect_to tweets_url, notice: "「#{@tweet.content}をツイートしました。」"
+      else
+        render :new
+      end
     end
   end
 
+  def confirm
+    @tweet = Tweet.new(tweet_params)
+    render :new if @tweet.invalid?
+  end
+
   def edit
-    @tweet = Tweet.find(params[:id])
   end
 
   def update
-    @tweet = Tweet.find(params[:id])
     if @tweet.update(tweet_params)
       redirect_to tweets_url, notice: "「#{@tweet.created_at}のツイートを更新しました。」"
     else

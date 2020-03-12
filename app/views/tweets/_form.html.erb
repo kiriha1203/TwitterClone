@@ -1,8 +1,8 @@
-<%= form_with(model: tweet, local: true) do |form| %>
-  <% if tweet.errors.any? %>
+<%= form_with(model: @tweet, local: true  ,url: choose_new_or_edit ) do |form| %>
+  <% if @tweet.errors.any? %>
     <div id="error_explanation">
       <ul>
-        <% tweet.errors.full_messages.each do |msg| %>
+        <% @tweet.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
