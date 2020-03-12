@@ -8,6 +8,6 @@
 
 .loginbtn {
   position: absolute;
-  bottom: 48%;
-  right: 48%;
+  bottom: calc(50% - 19px);
+  right: calc(50% - 44.2px);
 }

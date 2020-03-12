@@ -6,41 +6,41 @@ html {
 
 
 header {
+
   background-color: #141F29;
   font-size: 0.8rem;
   height: 50px;
   margin-top: -1.5rem;
   border-bottom: 1px solid #26323C;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  }
+
+  li {
+    list-style: none;
+
+    a {
+      color: #fff;
+      display: block;
+      text-decoration: none;
+      padding: 15px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
-header ul {
-  margin: 0;
-  padding: 0;
-}
-
-header ul:after {
-  content: "";
-  clear: both;
-  display: block;
-
-}
-
-header li {
-  list-style: none;
-}
-
-header li a {
-  color: #fff;
-  display: block;
-  text-decoration: none;
-  padding: 15px;
-}
-
-header li a:hover {
-  text-decoration: underline;
-}
-
-.left{
+.left {
   color: #c75454;
   float: left;
   font-size: 0.87rem;
@@ -67,15 +67,15 @@ body {
   bottom: 0;
   background-color: #141F29;
   display: table;
-}
 
-.footer p {
-  color: #fff;
-  display: table-cell;
-  font-size: 0.8rem;
-  text-align: center;
-  vertical-align: middle;
-  border-top: 1px solid #26323C;
+  p {
+    color: #fff;
+    display: table-cell;
+    font-size: 0.8rem;
+    text-align: center;
+    vertical-align: middle;
+    border-top: 1px solid #26323C;
+  }
 }
 
 .create_edit_confirm_tweet {
