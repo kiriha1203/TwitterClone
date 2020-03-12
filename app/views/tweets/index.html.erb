@@ -27,7 +27,7 @@
         <td colspan="2" class="t_content"><%= tweet.content %></td>
       </tr>
       <tr>
-        <td class="t_create_at"><%= tweet.created_at %></td> <%# updated_at使用するかも　%>
+        <td class="t_create_at"><%= tweet.created_at.strftime("%Y-%m-%d %H:%M") %></td> <%# updated_at使用するかも　%>
         <td class="t_edit">
           <%= link_to '編集', edit_tweet_path(tweet), class: 'btn btn-primary'%>
           <%= link_to '削除', tweet, method: :delete,
